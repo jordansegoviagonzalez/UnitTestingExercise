@@ -7,9 +7,13 @@ namespace UnitTestingExercise.Tests
 {
     public class UnitTests
     {
-        //Up on inspection, I see we will be using the data attribute Theory 👀
+        // Up on inspection, I see we will be using the data attribute Theory 👀
         [Theory]
-        [InlineData(2, 3, 5, 10)] //Add test data <-------
+        [InlineData(2, 3, 5, 10)]   //Add test data <-------
+        [InlineData(1, 2, 3, 6)]    // New data
+        [InlineData(0, 0, 0, 0)]    // New data
+        [InlineData(5, 5, 5, 15)]   // New data
+        [InlineData(-1, -1, -1, -3)]// New data
         public void AddTest(int num1, int num2, int num3, int expected)
         {
             //Start Step 3 here:✅
@@ -47,7 +51,11 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData(5,5,0)]//Add test data <-------
+        [InlineData(5, 5, 0)]        //Add test data <-------
+        [InlineData(10, 5, 5)]       // New data
+        [InlineData(100, 50, 50)]    // New data
+        [InlineData(0, 0, 0)]        // New data
+        [InlineData(-5, -5, 0)]      // New data0
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:✅
@@ -64,7 +72,11 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData(5,5,25)]//Add test data <-------
+        [InlineData(5, 5, 25)]        //Add test data <-------
+        [InlineData(10, 2, 20)]       // New data
+        [InlineData(3, 3, 9)]         // New data
+        [InlineData(0, 100, 0)]       // New data
+        [InlineData(-5, -5, 25)]      // New data
         public void MultiplyTest(int num1, int num2, int expected)
         {
             //Start Step 7 here:✅
@@ -81,7 +93,11 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData(5,5,1)]//Add test data <-------
+        [InlineData(5, 5, 1)]        //Add test data <-------
+        [InlineData(10, 2, 5)]       // New data
+        [InlineData(100, 25, 4)]     // New data
+        [InlineData(0, 1, 0)]        // New data
+        [InlineData(9, 3, 3)]        // New data
         public void DivideTest(int num1, int num2, int expected)
         {
             //Arrange
